@@ -16,7 +16,7 @@ public class DemoController {
 	Logger logger = LoggerFactory.getLogger(DemoController.class);
 	
 	@RequestMapping("/topic")
-	public List<Topic> getMsg(){
+	public List<Topic> getAllTopics(){
 		logger.info("topic API called : /topic");
 		return Arrays.asList(new Topic("spring","Spring Framework","Spring framework discription"),
 				new Topic("core java","core java j2se","core java discription"),

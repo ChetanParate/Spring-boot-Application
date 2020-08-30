@@ -12,6 +12,9 @@ import com.chetan.springbootstarter.repository.TopicRepository;
 @Service
 public class TopicServices {
 	
+	@Autowired
+	private TopicRepository topicRepository;
+	
 //	private List<Topic> topics = new ArrayList<>(Arrays.asList(
 //								new Topic("spring","Spring Framework","Spring framework discription"),
 //								new Topic("java","core java j2se","core java discription"),
@@ -46,10 +49,7 @@ public class TopicServices {
 //		topics.removeIf(t -> t.getId().equals(id));
 //		//topics.forEach(System.out::println);
 //	}
-	
-	@Autowired
-	private TopicRepository topicRepository;
-	
+		
 	public List<Topic> getAllTopics(){
 		
 		List<Topic> topics = new ArrayList<>();
