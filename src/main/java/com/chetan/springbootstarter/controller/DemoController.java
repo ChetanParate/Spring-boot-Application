@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.chetan.springbootstarter.model.Topic;
 
 @RestController
+@RequestMapping("/api")
 public class DemoController {
 	
 	Logger logger = LoggerFactory.getLogger(DemoController.class);
@@ -24,7 +25,7 @@ public class DemoController {
 				new Topic("restful","Restful web service","Restful web service discription"));
 	}
 	
-	@RequestMapping("/")
+	//@RequestMapping("/")
 	public String getMessage(){
 		logger.info("Spring Boot App working fine..");
 		return "Hey Chetan, Hows you doing ? This is your first springboot application";
